@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+    <globalConfiguration>
+        <parameter name="sendMultiRefs" value="true"/>
+        <parameter name="disablePrettyXML" value="true"/>
+        <parameter name="adminPassword" value="admin"/>
+
+        <parameter name="dotNetSoapEncFix" value="true"/>
+        <parameter name="enableNamespacePrefixOptimization" value="false"/>
+        <parameter name="sendXMLDeclaration" value="true"/>
+        <parameter name="sendXsiTypes" value="true"/>
+        <parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+        <requestFlow>
+            <handler type="java:org.apache.axis.handlers.JWSHandler">
+                <parameter name="scope" value="session"/>
+            </handler>
+            <handler type="java:org.apache.axis.handlers.JWSHandler">
+                <parameter name="scope" value="request"/>
+                <parameter name="extension" value=".jwr"/>
+            </handler>
+        </requestFlow>
+    </globalConfiguration>
+
+    <handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+    <handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+    <handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+    <service name="AdminService" provider="java:MSG">
+        <parameter name="allowedMethods" value="AdminService"/>
+        <parameter name="enableRemoteAdmin" value="false"/>
+        <parameter name="className" value="org.apache.axis.utils.Admin"/>
+        <namespace>http://xml.apache.org/axis/wsdd/</namespace>
+    </service>
+
+    <service name="Version" provider="java:RPC">
+        <parameter name="allowedMethods" value="getVersion"/>
+        <parameter name="className" value="org.apache.axis.Version"/>
+    </service>
+    <service name="SOAPMonitorService" provider="java:RPC">
+        <parameter name="allowedMethods" value="publishMessage"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="className" value="org.apache.axis.monitor.SOAPMonitorService"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="User_Regist"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Sign_In"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Check_Question_Answer"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Find_Password_Question"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Change_Password"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_Main_Activity"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Read_Main_Activity"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_Classify_Activity_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Activity_Count"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Channel_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Channel_Image"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_Folk_Activity"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Folk_Count"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Folk_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Folk_Image"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Folk_Single_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Search_Folk_Info"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_User_Order"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Cancel_User_Order"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Order"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_ID"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Check_Is_Order"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_Find_Activity"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Find_Activity_ID"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Find_Activity_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_User_Comment_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Delete_User_Comment_By_ID"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Update_User_Comment_Informaiton"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Update_User_Comment_Image"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Comment_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Comment_Information_By_User"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Comment_Information_By_Own"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Is_Like"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Comment_Reply"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Comment_Image"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Update_folk_activity_Image"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Set_User_Like"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Cancel_User_Like"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_User_Comment_Reply"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Update_User_Comment_Reply"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Delete_User_Comment_Reply"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Comment_Count"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Follow_Number"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Fans_Number"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Permission"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Focus_And_Fans_View_Permission"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Set_User_Permission"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Set_User_Focus_And_Fans_View_Permission"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_All_Info"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Follow_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Fans_Information"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Add_Focus"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Cancel_Focus"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Check_Follow_Eachohter"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_Search_UserInfo"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Image"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Update_User_Image"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="is_User_Follow"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <service name="Heritage" provider="java:RPC">
+        <parameter name="allowMethonds" value="Get_User_Update_Time"/>
+        <parameter name="className" value="Handle.HandleUser"/>
+    </service>
+    <handler name="soapmonitor" type="java:org.apache.axis.handlers.SOAPMonitorHandler">
+        <parameter name="wsdlURL" value="/axis/SOAPMonitorService-impl.wsdl"/>
+        <parameter name="serviceName" value="SOAPMonitorService"/>
+        <parameter name="namespace" value="http://tempuri.org/wsdl/2001/12/SOAPMonitorService-impl.wsdl"/>
+        <parameter name="portName" value="Demo"/>
+    </handler>
+    <transport name="http">
+        <requestFlow>
+            <handler type="URLMapper"/>
+            <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+
+            <!--comment following line for REMOVING wsdl spying via SOAPMonitor-->
+            <handler type="soapmonitor"/>
+        </requestFlow>
+        <responseFlow>
+            <!--comment following line for REMOVING wsdl spying via SOAPMonitor-->
+            <handler type="soapmonitor"/>
+        </responseFlow>
+        <parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+        <parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+        <parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+        <parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+        <parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+        <parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+    </transport>
+    <transport name="local">
+        <responseFlow>
+            <handler type="LocalResponder"/>
+        </responseFlow>
+    </transport>
+</deployment>

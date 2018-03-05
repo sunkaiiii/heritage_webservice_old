@@ -1,0 +1,2827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://Handle" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://Handle" xmlns:intf="http://Handle" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://Handle" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="userName" type="xsd:string"/>
+   <element name="passWord" type="xsd:string"/>
+   <element name="findPasswordQuestion" type="xsd:string"/>
+   <element name="findPassWordAnswer" type="xsd:string"/>
+   <element name="User_RegistReturn" type="xsd:string"/>
+   <element name="userName1" type="xsd:string"/>
+   <element name="PassWord" type="xsd:string"/>
+   <element name="Sign_InReturn" type="xsd:string"/>
+   <element name="userName2" type="xsd:string"/>
+   <element name="Get_User_IDReturn" type="xsd:int"/>
+   <element name="userName3" type="xsd:string"/>
+   <element name="Find_Password_QuestionReturn" type="xsd:string"/>
+   <element name="userName4" type="xsd:string"/>
+   <element name="questionAnswer" type="xsd:string"/>
+   <element name="Check_Question_AnswerReturn" type="xsd:string"/>
+   <element name="userName5" type="xsd:string"/>
+   <element name="Password" type="xsd:string"/>
+   <element name="Change_PasswordReturn" type="xsd:string"/>
+   <element name="activityTitle" type="xsd:string"/>
+   <element name="activityContent" type="xsd:string"/>
+   <element name="activityImage" type="xsd:string"/>
+   <element name="Add_Main_ActivityReturn" type="xsd:string"/>
+   <element name="activityImage1" type="xsd:string"/>
+   <element name="id" type="xsd:int"/>
+   <element name="Update_Main_ActivityReturn" type="xsd:string"/>
+   <element name="activityImage2" type="xsd:string"/>
+   <element name="id1" type="xsd:int"/>
+   <element name="Update_classify_activityReturn" type="xsd:string"/>
+   <element name="Read_Main_ActivityReturn" type="xsd:string"/>
+   <element name="activity_title" type="xsd:string"/>
+   <element name="activity_content" type="xsd:string"/>
+   <element name="activity_channel" type="xsd:string"/>
+   <element name="activity_image" type="xsd:string"/>
+   <element name="Add_Classify_Activity_InformationReturn" type="xsd:string"/>
+   <element name="channel" type="xsd:string"/>
+   <element name="Get_Activity_CountReturn" type="xsd:string"/>
+   <element name="channel1" type="xsd:string"/>
+   <element name="Get_Channel_InformationReturn" type="xsd:string"/>
+   <element name="id2" type="xsd:int"/>
+   <element name="Get_Channel_ImageReturn" type="xsd:string"/>
+   <element name="title" type="xsd:string"/>
+   <element name="content" type="xsd:string"/>
+   <element name="location" type="xsd:string"/>
+   <element name="image" type="xsd:string"/>
+   <element name="Add_Folk_ActivityReturn" type="xsd:string"/>
+   <element name="Get_Folk_CountReturn" type="xsd:string"/>
+   <element name="Get_Folk_InformationReturn" type="xsd:string"/>
+   <element name="id3" type="xsd:int"/>
+   <element name="Get_Folk_Single_InformationReturn" type="xsd:string"/>
+   <element name="id4" type="xsd:int"/>
+   <element name="Get_Folk_ImageReturn" type="xsd:string"/>
+   <element name="activityImage3" type="xsd:string"/>
+   <element name="id5" type="xsd:int"/>
+   <element name="Update_folk_activity_ImageReturn" type="xsd:string"/>
+   <element name="searhInfo" type="xsd:string"/>
+   <element name="Search_Folk_InfoReturn" type="xsd:string"/>
+   <element name="userID" type="xsd:int"/>
+   <element name="orderID" type="xsd:int"/>
+   <element name="Add_User_OrderReturn" type="xsd:string"/>
+   <element name="userID1" type="xsd:int"/>
+   <element name="orderID1" type="xsd:int"/>
+   <element name="Cancel_User_OrderReturn" type="xsd:string"/>
+   <element name="userID2" type="xsd:int"/>
+   <element name="Get_User_OrderReturn" type="xsd:string"/>
+   <element name="userID3" type="xsd:int"/>
+   <element name="orderID2" type="xsd:int"/>
+   <element name="Check_Is_OrderReturn" type="xsd:int"/>
+   <element name="title1" type="xsd:string"/>
+   <element name="content1" type="xsd:string"/>
+   <element name="image1" type="xsd:string"/>
+   <element name="Add_Find_ActivityReturn" type="xsd:string"/>
+   <element name="Get_Find_Activity_IDReturn" type="xsd:string"/>
+   <element name="id6" type="xsd:int"/>
+   <element name="Get_Find_Activity_InformationReturn" type="xsd:string"/>
+   <element name="imageCode" type="xsd:string"/>
+   <element name="id7" type="xsd:int"/>
+   <element name="Update_Find_Activity_ImageReturn" type="xsd:string"/>
+   <element name="user_id" type="xsd:int"/>
+   <element name="comment_title" type="xsd:string"/>
+   <element name="comment_content" type="xsd:string"/>
+   <element name="comment_image" type="xsd:string"/>
+   <element name="Add_User_Comment_InformationReturn" type="xsd:string"/>
+   <element name="commentID" type="xsd:int"/>
+   <element name="Delete_User_Comment_By_IDReturn" type="xsd:string"/>
+   <element name="img" type="xsd:string"/>
+   <element name="id8" type="xsd:int"/>
+   <element name="Update_User_Comment_ImageReturn" type="xsd:string"/>
+   <element name="commentID1" type="xsd:int"/>
+   <element name="comment_title1" type="xsd:string"/>
+   <element name="comment_content1" type="xsd:string"/>
+   <element name="comment_image1" type="xsd:string"/>
+   <element name="Update_User_Comment_InformaitonReturn" type="xsd:string"/>
+   <element name="Get_User_Comment_IDReturn" type="xsd:string"/>
+   <element name="userID4" type="xsd:int"/>
+   <element name="Get_User_Comment_ID_By_UserReturn" type="xsd:string"/>
+   <element name="Get_User_Comment_InformationReturn" type="xsd:string"/>
+   <element name="userID5" type="xsd:int"/>
+   <element name="Get_User_Comment_InformationReturn1" type="xsd:string"/>
+   <element name="userID6" type="xsd:int"/>
+   <element name="Get_User_Comment_Information_By_UserReturn" type="xsd:string"/>
+   <element name="userID7" type="xsd:int"/>
+   <element name="Get_User_Comment_Information_By_OwnReturn" type="xsd:string"/>
+   <element name="id9" type="xsd:int"/>
+   <element name="Get_User_Comment_ImageReturn" type="xsd:string"/>
+   <element name="user" type="xsd:int"/>
+   <element name="commentID2" type="xsd:int"/>
+   <element name="Get_All_User_Coment_Info_By_IDReturn" type="xsd:string"/>
+   <element name="commentID3" type="xsd:int"/>
+   <element name="Get_Comment_Like_NumberReturn" type="xsd:string"/>
+   <element name="commentID4" type="xsd:int"/>
+   <element name="Get_User_Comment_CountReturn" type="xsd:string"/>
+   <element name="userID8" type="xsd:int"/>
+   <element name="commentID5" type="xsd:int"/>
+   <element name="Get_User_Is_LikeReturn" type="xsd:string"/>
+   <element name="commentID6" type="xsd:int"/>
+   <element name="Get_User_Comment_ReplyReturn" type="xsd:string"/>
+   <element name="userID9" type="xsd:int"/>
+   <element name="commentID7" type="xsd:int"/>
+   <element name="Set_User_LikeReturn" type="xsd:string"/>
+   <element name="userID10" type="xsd:int"/>
+   <element name="commentID8" type="xsd:int"/>
+   <element name="Cancel_User_LikeReturn" type="xsd:string"/>
+   <element name="userID11" type="xsd:int"/>
+   <element name="commentID9" type="xsd:int"/>
+   <element name="replyContent" type="xsd:string"/>
+   <element name="intentString" type="xsd:string"/>
+   <element name="Add_User_Comment_ReplyReturn" type="xsd:string"/>
+   <element name="replyID" type="xsd:int"/>
+   <element name="replyContent1" type="xsd:string"/>
+   <element name="Update_User_Comment_ReplyReturn" type="xsd:string"/>
+   <element name="replyID1" type="xsd:int"/>
+   <element name="Delete_User_Comment_ReplyReturn" type="xsd:string"/>
+   <element name="userID12" type="xsd:int"/>
+   <element name="Get_Follow_NumberReturn" type="xsd:string"/>
+   <element name="userID13" type="xsd:int"/>
+   <element name="Get_Fans_NumberReturn" type="xsd:string"/>
+   <element name="userID14" type="xsd:int"/>
+   <element name="Get_User_PermissionReturn" type="xsd:int"/>
+   <element name="userID15" type="xsd:int"/>
+   <element name="Get_User_Focus_And_Fans_View_PermissionReturn" type="xsd:int"/>
+   <element name="userID16" type="xsd:int"/>
+   <element name="permission" type="xsd:int"/>
+   <element name="Set_User_PermissionReturn" type="xsd:string"/>
+   <element name="userID17" type="xsd:int"/>
+   <element name="permission1" type="xsd:int"/>
+   <element name="Set_User_Focus_And_Fans_View_PermissionReturn" type="xsd:string"/>
+   <element name="userID18" type="xsd:int"/>
+   <element name="Get_User_All_InfoReturn" type="xsd:string"/>
+   <element name="userID19" type="xsd:int"/>
+   <element name="Get_Follow_InformationReturn" type="xsd:string"/>
+   <element name="userID20" type="xsd:int"/>
+   <element name="Get_Fans_InformationReturn" type="xsd:string"/>
+   <element name="userID21" type="xsd:int"/>
+   <element name="focusID" type="xsd:int"/>
+   <element name="Add_FocusReturn" type="xsd:string"/>
+   <element name="userID22" type="xsd:int"/>
+   <element name="focusID1" type="xsd:int"/>
+   <element name="Cancel_FocusReturn" type="xsd:string"/>
+   <element name="userID23" type="xsd:int"/>
+   <element name="focusID2" type="xsd:int"/>
+   <element name="Check_Follow_EachohterReturn" type="xsd:string"/>
+   <element name="name" type="xsd:string"/>
+   <element name="Get_Search_UserInfoReturn" type="xsd:string"/>
+   <element name="userName6" type="xsd:int"/>
+   <element name="fansName" type="xsd:int"/>
+   <element name="is_User_FollowReturn" type="xsd:string"/>
+   <element name="userID24" type="xsd:int"/>
+   <element name="Get_User_ImageReturn" type="xsd:string"/>
+   <element name="userID25" type="xsd:int"/>
+   <element name="image2" type="xsd:string"/>
+   <element name="Update_User_ImageReturn" type="xsd:string"/>
+   <element name="userID26" type="xsd:int"/>
+   <element name="Get_User_Update_TimeReturn" type="xsd:string"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="Cancel_User_LikeResponse">
+
+      <wsdl:part element="impl:Cancel_User_LikeReturn" name="Cancel_User_LikeReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Classify_Activity_InformationRequest">
+
+      <wsdl:part element="impl:activity_title" name="activity_title"/>
+
+      <wsdl:part element="impl:activity_content" name="activity_content"/>
+
+      <wsdl:part element="impl:activity_channel" name="activity_channel"/>
+
+      <wsdl:part element="impl:activity_image" name="activity_image"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_All_User_Coment_Info_By_IDRequest">
+
+      <wsdl:part element="impl:user" name="user"/>
+
+      <wsdl:part element="impl:commentID2" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Sign_InRequest">
+
+      <wsdl:part element="impl:userName1" name="userName"/>
+
+      <wsdl:part element="impl:PassWord" name="PassWord"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Fans_NumberResponse">
+
+      <wsdl:part element="impl:Get_Fans_NumberReturn" name="Get_Fans_NumberReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="User_RegistResponse">
+
+      <wsdl:part element="impl:User_RegistReturn" name="User_RegistReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_Find_Activity_ImageResponse">
+
+      <wsdl:part element="impl:Update_Find_Activity_ImageReturn" name="Update_Find_Activity_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_ImageRequest">
+
+      <wsdl:part element="impl:id9" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Find_Activity_IDResponse">
+
+      <wsdl:part element="impl:Get_Find_Activity_IDReturn" name="Get_Find_Activity_IDReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_User_OrderRequest">
+
+      <wsdl:part element="impl:userID" name="userID"/>
+
+      <wsdl:part element="impl:orderID" name="orderID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Update_TimeRequest">
+
+      <wsdl:part element="impl:userID26" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Main_ActivityRequest">
+
+      <wsdl:part element="impl:activityTitle" name="activityTitle"/>
+
+      <wsdl:part element="impl:activityContent" name="activityContent"/>
+
+      <wsdl:part element="impl:activityImage" name="activityImage"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_OrderResponse">
+
+      <wsdl:part element="impl:Get_User_OrderReturn" name="Get_User_OrderReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Cancel_FocusResponse">
+
+      <wsdl:part element="impl:Cancel_FocusReturn" name="Cancel_FocusReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Delete_User_Comment_By_IDResponse">
+
+      <wsdl:part element="impl:Delete_User_Comment_By_IDReturn" name="Delete_User_Comment_By_IDReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Is_LikeRequest">
+
+      <wsdl:part element="impl:userID8" name="userID"/>
+
+      <wsdl:part element="impl:commentID5" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Follow_InformationResponse">
+
+      <wsdl:part element="impl:Get_Follow_InformationReturn" name="Get_Follow_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Set_User_PermissionResponse">
+
+      <wsdl:part element="impl:Set_User_PermissionReturn" name="Set_User_PermissionReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_Single_InformationRequest">
+
+      <wsdl:part element="impl:id3" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Find_Activity_IDRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_User_Comment_InformationRequest">
+
+      <wsdl:part element="impl:user_id" name="user_id"/>
+
+      <wsdl:part element="impl:comment_title" name="comment_title"/>
+
+      <wsdl:part element="impl:comment_content" name="comment_content"/>
+
+      <wsdl:part element="impl:comment_image" name="comment_image"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_CountRequest">
+
+      <wsdl:part element="impl:commentID4" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Follow_NumberRequest">
+
+      <wsdl:part element="impl:userID12" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_PermissionRequest">
+
+      <wsdl:part element="impl:userID14" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Check_Is_OrderResponse">
+
+      <wsdl:part element="impl:Check_Is_OrderReturn" name="Check_Is_OrderReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_Find_Activity_ImageRequest">
+
+      <wsdl:part element="impl:imageCode" name="imageCode"/>
+
+      <wsdl:part element="impl:id7" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_CountRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Update_TimeResponse">
+
+      <wsdl:part element="impl:Get_User_Update_TimeReturn" name="Get_User_Update_TimeReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_ImageResponse">
+
+      <wsdl:part element="impl:Get_User_ImageReturn" name="Get_User_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Search_Folk_InfoResponse">
+
+      <wsdl:part element="impl:Search_Folk_InfoReturn" name="Search_Folk_InfoReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_User_OrderResponse">
+
+      <wsdl:part element="impl:Add_User_OrderReturn" name="Add_User_OrderReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_InformationResponse1">
+
+      <wsdl:part element="impl:Get_User_Comment_InformationReturn1" name="Get_User_Comment_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_Comment_InformaitonResponse">
+
+      <wsdl:part element="impl:Update_User_Comment_InformaitonReturn" name="Update_User_Comment_InformaitonReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_folk_activity_ImageRequest">
+
+      <wsdl:part element="impl:activityImage3" name="activityImage"/>
+
+      <wsdl:part element="impl:id5" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_ImageRequest">
+
+      <wsdl:part element="impl:userID24" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_All_InfoRequest">
+
+      <wsdl:part element="impl:userID18" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_Information_By_UserRequest">
+
+      <wsdl:part element="impl:userID6" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Fans_InformationResponse">
+
+      <wsdl:part element="impl:Get_Fans_InformationReturn" name="Get_Fans_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_FocusResponse">
+
+      <wsdl:part element="impl:Add_FocusReturn" name="Add_FocusReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Is_LikeResponse">
+
+      <wsdl:part element="impl:Get_User_Is_LikeReturn" name="Get_User_Is_LikeReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Check_Follow_EachohterRequest">
+
+      <wsdl:part element="impl:userID23" name="userID"/>
+
+      <wsdl:part element="impl:focusID2" name="focusID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_InformationResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_InformationReturn" name="Get_User_Comment_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Folk_ActivityRequest">
+
+      <wsdl:part element="impl:title" name="title"/>
+
+      <wsdl:part element="impl:content" name="content"/>
+
+      <wsdl:part element="impl:location" name="location"/>
+
+      <wsdl:part element="impl:image" name="image"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_ImageResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_ImageReturn" name="Get_User_Comment_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_Main_ActivityResponse">
+
+      <wsdl:part element="impl:Update_Main_ActivityReturn" name="Update_Main_ActivityReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_IDResponse">
+
+      <wsdl:part element="impl:Get_User_IDReturn" name="Get_User_IDReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Sign_InResponse">
+
+      <wsdl:part element="impl:Sign_InReturn" name="Sign_InReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Find_Password_QuestionResponse">
+
+      <wsdl:part element="impl:Find_Password_QuestionReturn" name="Find_Password_QuestionReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_Comment_ReplyResponse">
+
+      <wsdl:part element="impl:Update_User_Comment_ReplyReturn" name="Update_User_Comment_ReplyReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_All_User_Coment_Info_By_IDResponse">
+
+      <wsdl:part element="impl:Get_All_User_Coment_Info_By_IDReturn" name="Get_All_User_Coment_Info_By_IDReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Follow_NumberResponse">
+
+      <wsdl:part element="impl:Get_Follow_NumberReturn" name="Get_Follow_NumberReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_ImageResponse">
+
+      <wsdl:part element="impl:Get_Folk_ImageReturn" name="Get_Folk_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_All_InfoResponse">
+
+      <wsdl:part element="impl:Get_User_All_InfoReturn" name="Get_User_All_InfoReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Find_ActivityRequest">
+
+      <wsdl:part element="impl:title1" name="title"/>
+
+      <wsdl:part element="impl:content1" name="content"/>
+
+      <wsdl:part element="impl:image1" name="image"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Activity_CountResponse">
+
+      <wsdl:part element="impl:Get_Activity_CountReturn" name="Get_Activity_CountReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Find_ActivityResponse">
+
+      <wsdl:part element="impl:Add_Find_ActivityReturn" name="Add_Find_ActivityReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Read_Main_ActivityRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Search_UserInfoRequest">
+
+      <wsdl:part element="impl:name" name="name"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_FocusRequest">
+
+      <wsdl:part element="impl:userID21" name="userID"/>
+
+      <wsdl:part element="impl:focusID" name="focusID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_classify_activityResponse">
+
+      <wsdl:part element="impl:Update_classify_activityReturn" name="Update_classify_activityReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_ID_By_UserResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_ID_By_UserReturn" name="Get_User_Comment_ID_By_UserReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Channel_ImageResponse">
+
+      <wsdl:part element="impl:Get_Channel_ImageReturn" name="Get_Channel_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Activity_CountRequest">
+
+      <wsdl:part element="impl:channel" name="channel"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Set_User_LikeResponse">
+
+      <wsdl:part element="impl:Set_User_LikeReturn" name="Set_User_LikeReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Read_Main_ActivityResponse">
+
+      <wsdl:part element="impl:Read_Main_ActivityReturn" name="Read_Main_ActivityReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_InformationRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Comment_Like_NumberResponse">
+
+      <wsdl:part element="impl:Get_Comment_Like_NumberReturn" name="Get_Comment_Like_NumberReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Set_User_PermissionRequest">
+
+      <wsdl:part element="impl:userID16" name="userID"/>
+
+      <wsdl:part element="impl:permission" name="permission"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_IDResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_IDReturn" name="Get_User_Comment_IDReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Folk_ActivityResponse">
+
+      <wsdl:part element="impl:Add_Folk_ActivityReturn" name="Add_Folk_ActivityReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="is_User_FollowResponse">
+
+      <wsdl:part element="impl:is_User_FollowReturn" name="is_User_FollowReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_Single_InformationResponse">
+
+      <wsdl:part element="impl:Get_Folk_Single_InformationReturn" name="Get_Folk_Single_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_Comment_ImageResponse">
+
+      <wsdl:part element="impl:Update_User_Comment_ImageReturn" name="Update_User_Comment_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_Information_By_OwnRequest">
+
+      <wsdl:part element="impl:userID7" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Cancel_User_OrderResponse">
+
+      <wsdl:part element="impl:Cancel_User_OrderReturn" name="Cancel_User_OrderReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Change_PasswordResponse">
+
+      <wsdl:part element="impl:Change_PasswordReturn" name="Change_PasswordReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_Main_ActivityRequest">
+
+      <wsdl:part element="impl:activityImage1" name="activityImage"/>
+
+      <wsdl:part element="impl:id" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Check_Question_AnswerResponse">
+
+      <wsdl:part element="impl:Check_Question_AnswerReturn" name="Check_Question_AnswerReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_Information_By_OwnResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_Information_By_OwnReturn" name="Get_User_Comment_Information_By_OwnReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Fans_NumberRequest">
+
+      <wsdl:part element="impl:userID13" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_IDRequest">
+
+      <wsdl:part element="impl:userName2" name="userName"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_ID_By_UserRequest">
+
+      <wsdl:part element="impl:userID4" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Cancel_User_OrderRequest">
+
+      <wsdl:part element="impl:userID1" name="userID"/>
+
+      <wsdl:part element="impl:orderID1" name="orderID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_InformationRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="Check_Is_OrderRequest">
+
+      <wsdl:part element="impl:userID3" name="userID"/>
+
+      <wsdl:part element="impl:orderID2" name="orderID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Focus_And_Fans_View_PermissionRequest">
+
+      <wsdl:part element="impl:userID15" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Channel_ImageRequest">
+
+      <wsdl:part element="impl:id2" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Focus_And_Fans_View_PermissionResponse">
+
+      <wsdl:part element="impl:Get_User_Focus_And_Fans_View_PermissionReturn" name="Get_User_Focus_And_Fans_View_PermissionReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Set_User_Focus_And_Fans_View_PermissionRequest">
+
+      <wsdl:part element="impl:userID17" name="userID"/>
+
+      <wsdl:part element="impl:permission1" name="permission"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Set_User_LikeRequest">
+
+      <wsdl:part element="impl:userID9" name="userID"/>
+
+      <wsdl:part element="impl:commentID7" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Delete_User_Comment_ReplyRequest">
+
+      <wsdl:part element="impl:replyID1" name="replyID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="is_User_FollowRequest">
+
+      <wsdl:part element="impl:userName6" name="userName"/>
+
+      <wsdl:part element="impl:fansName" name="fansName"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_InformationResponse">
+
+      <wsdl:part element="impl:Get_Folk_InformationReturn" name="Get_Folk_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_IDRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="Search_Folk_InfoRequest">
+
+      <wsdl:part element="impl:searhInfo" name="searhInfo"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_User_Comment_ReplyRequest">
+
+      <wsdl:part element="impl:userID11" name="userID"/>
+
+      <wsdl:part element="impl:commentID9" name="commentID"/>
+
+      <wsdl:part element="impl:replyContent" name="replyContent"/>
+
+      <wsdl:part element="impl:intentString" name="intentString"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_Comment_InformaitonRequest">
+
+      <wsdl:part element="impl:commentID1" name="commentID"/>
+
+      <wsdl:part element="impl:comment_title1" name="comment_title"/>
+
+      <wsdl:part element="impl:comment_content1" name="comment_content"/>
+
+      <wsdl:part element="impl:comment_image1" name="comment_image"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_ImageRequest">
+
+      <wsdl:part element="impl:userID25" name="userID"/>
+
+      <wsdl:part element="impl:image2" name="image"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Fans_InformationRequest">
+
+      <wsdl:part element="impl:userID20" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_ImageResponse">
+
+      <wsdl:part element="impl:Update_User_ImageReturn" name="Update_User_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Find_Password_QuestionRequest">
+
+      <wsdl:part element="impl:userName3" name="userName"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Comment_Like_NumberRequest">
+
+      <wsdl:part element="impl:commentID3" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Delete_User_Comment_By_IDRequest">
+
+      <wsdl:part element="impl:commentID" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_User_Comment_ReplyResponse">
+
+      <wsdl:part element="impl:Add_User_Comment_ReplyReturn" name="Add_User_Comment_ReplyReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Check_Question_AnswerRequest">
+
+      <wsdl:part element="impl:userName4" name="userName"/>
+
+      <wsdl:part element="impl:questionAnswer" name="questionAnswer"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="User_RegistRequest">
+
+      <wsdl:part element="impl:userName" name="userName"/>
+
+      <wsdl:part element="impl:passWord" name="passWord"/>
+
+      <wsdl:part element="impl:findPasswordQuestion" name="findPasswordQuestion"/>
+
+      <wsdl:part element="impl:findPassWordAnswer" name="findPassWordAnswer"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_classify_activityRequest">
+
+      <wsdl:part element="impl:activityImage2" name="activityImage"/>
+
+      <wsdl:part element="impl:id1" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Find_Activity_InformationResponse">
+
+      <wsdl:part element="impl:Get_Find_Activity_InformationReturn" name="Get_Find_Activity_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Cancel_User_LikeRequest">
+
+      <wsdl:part element="impl:userID10" name="userID"/>
+
+      <wsdl:part element="impl:commentID8" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Find_Activity_InformationRequest">
+
+      <wsdl:part element="impl:id6" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_CountResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_CountReturn" name="Get_User_Comment_CountReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Change_PasswordRequest">
+
+      <wsdl:part element="impl:userName5" name="userName"/>
+
+      <wsdl:part element="impl:Password" name="Password"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_PermissionResponse">
+
+      <wsdl:part element="impl:Get_User_PermissionReturn" name="Get_User_PermissionReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_Information_By_UserResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_Information_By_UserReturn" name="Get_User_Comment_Information_By_UserReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Channel_InformationResponse">
+
+      <wsdl:part element="impl:Get_Channel_InformationReturn" name="Get_Channel_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Channel_InformationRequest">
+
+      <wsdl:part element="impl:channel1" name="channel"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_Comment_ImageRequest">
+
+      <wsdl:part element="impl:img" name="img"/>
+
+      <wsdl:part element="impl:id8" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_CountResponse">
+
+      <wsdl:part element="impl:Get_Folk_CountReturn" name="Get_Folk_CountReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_folk_activity_ImageResponse">
+
+      <wsdl:part element="impl:Update_folk_activity_ImageReturn" name="Update_folk_activity_ImageReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Classify_Activity_InformationResponse">
+
+      <wsdl:part element="impl:Add_Classify_Activity_InformationReturn" name="Add_Classify_Activity_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_Main_ActivityResponse">
+
+      <wsdl:part element="impl:Add_Main_ActivityReturn" name="Add_Main_ActivityReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Folk_ImageRequest">
+
+      <wsdl:part element="impl:id4" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_OrderRequest">
+
+      <wsdl:part element="impl:userID2" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Check_Follow_EachohterResponse">
+
+      <wsdl:part element="impl:Check_Follow_EachohterReturn" name="Check_Follow_EachohterReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Add_User_Comment_InformationResponse">
+
+      <wsdl:part element="impl:Add_User_Comment_InformationReturn" name="Add_User_Comment_InformationReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_ReplyResponse">
+
+      <wsdl:part element="impl:Get_User_Comment_ReplyReturn" name="Get_User_Comment_ReplyReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Delete_User_Comment_ReplyResponse">
+
+      <wsdl:part element="impl:Delete_User_Comment_ReplyReturn" name="Delete_User_Comment_ReplyReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Search_UserInfoResponse">
+
+      <wsdl:part element="impl:Get_Search_UserInfoReturn" name="Get_Search_UserInfoReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Cancel_FocusRequest">
+
+      <wsdl:part element="impl:userID22" name="userID"/>
+
+      <wsdl:part element="impl:focusID1" name="focusID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_InformationRequest1">
+
+      <wsdl:part element="impl:userID5" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Update_User_Comment_ReplyRequest">
+
+      <wsdl:part element="impl:replyID" name="replyID"/>
+
+      <wsdl:part element="impl:replyContent1" name="replyContent"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Set_User_Focus_And_Fans_View_PermissionResponse">
+
+      <wsdl:part element="impl:Set_User_Focus_And_Fans_View_PermissionReturn" name="Set_User_Focus_And_Fans_View_PermissionReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_User_Comment_ReplyRequest">
+
+      <wsdl:part element="impl:commentID6" name="commentID"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="Get_Follow_InformationRequest">
+
+      <wsdl:part element="impl:userID19" name="userID"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="HandleUser">
+
+      <wsdl:operation name="User_Regist" parameterOrder="userName passWord findPasswordQuestion findPassWordAnswer">
+
+         <wsdl:input message="impl:User_RegistRequest" name="User_RegistRequest"/>
+
+         <wsdl:output message="impl:User_RegistResponse" name="User_RegistResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Sign_In" parameterOrder="userName PassWord">
+
+         <wsdl:input message="impl:Sign_InRequest" name="Sign_InRequest"/>
+
+         <wsdl:output message="impl:Sign_InResponse" name="Sign_InResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_ID" parameterOrder="userName">
+
+         <wsdl:input message="impl:Get_User_IDRequest" name="Get_User_IDRequest"/>
+
+         <wsdl:output message="impl:Get_User_IDResponse" name="Get_User_IDResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Find_Password_Question" parameterOrder="userName">
+
+         <wsdl:input message="impl:Find_Password_QuestionRequest" name="Find_Password_QuestionRequest"/>
+
+         <wsdl:output message="impl:Find_Password_QuestionResponse" name="Find_Password_QuestionResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Check_Question_Answer" parameterOrder="userName questionAnswer">
+
+         <wsdl:input message="impl:Check_Question_AnswerRequest" name="Check_Question_AnswerRequest"/>
+
+         <wsdl:output message="impl:Check_Question_AnswerResponse" name="Check_Question_AnswerResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Change_Password" parameterOrder="userName Password">
+
+         <wsdl:input message="impl:Change_PasswordRequest" name="Change_PasswordRequest"/>
+
+         <wsdl:output message="impl:Change_PasswordResponse" name="Change_PasswordResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Main_Activity" parameterOrder="activityTitle activityContent activityImage">
+
+         <wsdl:input message="impl:Add_Main_ActivityRequest" name="Add_Main_ActivityRequest"/>
+
+         <wsdl:output message="impl:Add_Main_ActivityResponse" name="Add_Main_ActivityResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_Main_Activity" parameterOrder="activityImage id">
+
+         <wsdl:input message="impl:Update_Main_ActivityRequest" name="Update_Main_ActivityRequest"/>
+
+         <wsdl:output message="impl:Update_Main_ActivityResponse" name="Update_Main_ActivityResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_classify_activity" parameterOrder="activityImage id">
+
+         <wsdl:input message="impl:Update_classify_activityRequest" name="Update_classify_activityRequest"/>
+
+         <wsdl:output message="impl:Update_classify_activityResponse" name="Update_classify_activityResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Read_Main_Activity">
+
+         <wsdl:input message="impl:Read_Main_ActivityRequest" name="Read_Main_ActivityRequest"/>
+
+         <wsdl:output message="impl:Read_Main_ActivityResponse" name="Read_Main_ActivityResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Classify_Activity_Information" parameterOrder="activity_title activity_content activity_channel activity_image">
+
+         <wsdl:input message="impl:Add_Classify_Activity_InformationRequest" name="Add_Classify_Activity_InformationRequest"/>
+
+         <wsdl:output message="impl:Add_Classify_Activity_InformationResponse" name="Add_Classify_Activity_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Activity_Count" parameterOrder="channel">
+
+         <wsdl:input message="impl:Get_Activity_CountRequest" name="Get_Activity_CountRequest"/>
+
+         <wsdl:output message="impl:Get_Activity_CountResponse" name="Get_Activity_CountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Channel_Information" parameterOrder="channel">
+
+         <wsdl:input message="impl:Get_Channel_InformationRequest" name="Get_Channel_InformationRequest"/>
+
+         <wsdl:output message="impl:Get_Channel_InformationResponse" name="Get_Channel_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Channel_Image" parameterOrder="id">
+
+         <wsdl:input message="impl:Get_Channel_ImageRequest" name="Get_Channel_ImageRequest"/>
+
+         <wsdl:output message="impl:Get_Channel_ImageResponse" name="Get_Channel_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Folk_Activity" parameterOrder="title content location image">
+
+         <wsdl:input message="impl:Add_Folk_ActivityRequest" name="Add_Folk_ActivityRequest"/>
+
+         <wsdl:output message="impl:Add_Folk_ActivityResponse" name="Add_Folk_ActivityResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Count">
+
+         <wsdl:input message="impl:Get_Folk_CountRequest" name="Get_Folk_CountRequest"/>
+
+         <wsdl:output message="impl:Get_Folk_CountResponse" name="Get_Folk_CountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Information">
+
+         <wsdl:input message="impl:Get_Folk_InformationRequest" name="Get_Folk_InformationRequest"/>
+
+         <wsdl:output message="impl:Get_Folk_InformationResponse" name="Get_Folk_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Single_Information" parameterOrder="id">
+
+         <wsdl:input message="impl:Get_Folk_Single_InformationRequest" name="Get_Folk_Single_InformationRequest"/>
+
+         <wsdl:output message="impl:Get_Folk_Single_InformationResponse" name="Get_Folk_Single_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Image" parameterOrder="id">
+
+         <wsdl:input message="impl:Get_Folk_ImageRequest" name="Get_Folk_ImageRequest"/>
+
+         <wsdl:output message="impl:Get_Folk_ImageResponse" name="Get_Folk_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_folk_activity_Image" parameterOrder="activityImage id">
+
+         <wsdl:input message="impl:Update_folk_activity_ImageRequest" name="Update_folk_activity_ImageRequest"/>
+
+         <wsdl:output message="impl:Update_folk_activity_ImageResponse" name="Update_folk_activity_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Search_Folk_Info" parameterOrder="searhInfo">
+
+         <wsdl:input message="impl:Search_Folk_InfoRequest" name="Search_Folk_InfoRequest"/>
+
+         <wsdl:output message="impl:Search_Folk_InfoResponse" name="Search_Folk_InfoResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_User_Order" parameterOrder="userID orderID">
+
+         <wsdl:input message="impl:Add_User_OrderRequest" name="Add_User_OrderRequest"/>
+
+         <wsdl:output message="impl:Add_User_OrderResponse" name="Add_User_OrderResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Cancel_User_Order" parameterOrder="userID orderID">
+
+         <wsdl:input message="impl:Cancel_User_OrderRequest" name="Cancel_User_OrderRequest"/>
+
+         <wsdl:output message="impl:Cancel_User_OrderResponse" name="Cancel_User_OrderResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Order" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_OrderRequest" name="Get_User_OrderRequest"/>
+
+         <wsdl:output message="impl:Get_User_OrderResponse" name="Get_User_OrderResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Check_Is_Order" parameterOrder="userID orderID">
+
+         <wsdl:input message="impl:Check_Is_OrderRequest" name="Check_Is_OrderRequest"/>
+
+         <wsdl:output message="impl:Check_Is_OrderResponse" name="Check_Is_OrderResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Find_Activity" parameterOrder="title content image">
+
+         <wsdl:input message="impl:Add_Find_ActivityRequest" name="Add_Find_ActivityRequest"/>
+
+         <wsdl:output message="impl:Add_Find_ActivityResponse" name="Add_Find_ActivityResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Find_Activity_ID">
+
+         <wsdl:input message="impl:Get_Find_Activity_IDRequest" name="Get_Find_Activity_IDRequest"/>
+
+         <wsdl:output message="impl:Get_Find_Activity_IDResponse" name="Get_Find_Activity_IDResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Find_Activity_Information" parameterOrder="id">
+
+         <wsdl:input message="impl:Get_Find_Activity_InformationRequest" name="Get_Find_Activity_InformationRequest"/>
+
+         <wsdl:output message="impl:Get_Find_Activity_InformationResponse" name="Get_Find_Activity_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_Find_Activity_Image" parameterOrder="imageCode id">
+
+         <wsdl:input message="impl:Update_Find_Activity_ImageRequest" name="Update_Find_Activity_ImageRequest"/>
+
+         <wsdl:output message="impl:Update_Find_Activity_ImageResponse" name="Update_Find_Activity_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_User_Comment_Information" parameterOrder="user_id comment_title comment_content comment_image">
+
+         <wsdl:input message="impl:Add_User_Comment_InformationRequest" name="Add_User_Comment_InformationRequest"/>
+
+         <wsdl:output message="impl:Add_User_Comment_InformationResponse" name="Add_User_Comment_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Delete_User_Comment_By_ID" parameterOrder="commentID">
+
+         <wsdl:input message="impl:Delete_User_Comment_By_IDRequest" name="Delete_User_Comment_By_IDRequest"/>
+
+         <wsdl:output message="impl:Delete_User_Comment_By_IDResponse" name="Delete_User_Comment_By_IDResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Comment_Image" parameterOrder="img id">
+
+         <wsdl:input message="impl:Update_User_Comment_ImageRequest" name="Update_User_Comment_ImageRequest"/>
+
+         <wsdl:output message="impl:Update_User_Comment_ImageResponse" name="Update_User_Comment_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Comment_Informaiton" parameterOrder="commentID comment_title comment_content comment_image">
+
+         <wsdl:input message="impl:Update_User_Comment_InformaitonRequest" name="Update_User_Comment_InformaitonRequest"/>
+
+         <wsdl:output message="impl:Update_User_Comment_InformaitonResponse" name="Update_User_Comment_InformaitonResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_ID">
+
+         <wsdl:input message="impl:Get_User_Comment_IDRequest" name="Get_User_Comment_IDRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_IDResponse" name="Get_User_Comment_IDResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_ID_By_User" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_Comment_ID_By_UserRequest" name="Get_User_Comment_ID_By_UserRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_ID_By_UserResponse" name="Get_User_Comment_ID_By_UserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information">
+
+         <wsdl:input message="impl:Get_User_Comment_InformationRequest" name="Get_User_Comment_InformationRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_InformationResponse" name="Get_User_Comment_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_Comment_InformationRequest1" name="Get_User_Comment_InformationRequest1"/>
+
+         <wsdl:output message="impl:Get_User_Comment_InformationResponse1" name="Get_User_Comment_InformationResponse1"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information_By_User" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_Comment_Information_By_UserRequest" name="Get_User_Comment_Information_By_UserRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_Information_By_UserResponse" name="Get_User_Comment_Information_By_UserResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information_By_Own" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_Comment_Information_By_OwnRequest" name="Get_User_Comment_Information_By_OwnRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_Information_By_OwnResponse" name="Get_User_Comment_Information_By_OwnResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Image" parameterOrder="id">
+
+         <wsdl:input message="impl:Get_User_Comment_ImageRequest" name="Get_User_Comment_ImageRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_ImageResponse" name="Get_User_Comment_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_All_User_Coment_Info_By_ID" parameterOrder="user commentID">
+
+         <wsdl:input message="impl:Get_All_User_Coment_Info_By_IDRequest" name="Get_All_User_Coment_Info_By_IDRequest"/>
+
+         <wsdl:output message="impl:Get_All_User_Coment_Info_By_IDResponse" name="Get_All_User_Coment_Info_By_IDResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Comment_Like_Number" parameterOrder="commentID">
+
+         <wsdl:input message="impl:Get_Comment_Like_NumberRequest" name="Get_Comment_Like_NumberRequest"/>
+
+         <wsdl:output message="impl:Get_Comment_Like_NumberResponse" name="Get_Comment_Like_NumberResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Count" parameterOrder="commentID">
+
+         <wsdl:input message="impl:Get_User_Comment_CountRequest" name="Get_User_Comment_CountRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_CountResponse" name="Get_User_Comment_CountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Is_Like" parameterOrder="userID commentID">
+
+         <wsdl:input message="impl:Get_User_Is_LikeRequest" name="Get_User_Is_LikeRequest"/>
+
+         <wsdl:output message="impl:Get_User_Is_LikeResponse" name="Get_User_Is_LikeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Reply" parameterOrder="commentID">
+
+         <wsdl:input message="impl:Get_User_Comment_ReplyRequest" name="Get_User_Comment_ReplyRequest"/>
+
+         <wsdl:output message="impl:Get_User_Comment_ReplyResponse" name="Get_User_Comment_ReplyResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Set_User_Like" parameterOrder="userID commentID">
+
+         <wsdl:input message="impl:Set_User_LikeRequest" name="Set_User_LikeRequest"/>
+
+         <wsdl:output message="impl:Set_User_LikeResponse" name="Set_User_LikeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Cancel_User_Like" parameterOrder="userID commentID">
+
+         <wsdl:input message="impl:Cancel_User_LikeRequest" name="Cancel_User_LikeRequest"/>
+
+         <wsdl:output message="impl:Cancel_User_LikeResponse" name="Cancel_User_LikeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_User_Comment_Reply" parameterOrder="userID commentID replyContent intentString">
+
+         <wsdl:input message="impl:Add_User_Comment_ReplyRequest" name="Add_User_Comment_ReplyRequest"/>
+
+         <wsdl:output message="impl:Add_User_Comment_ReplyResponse" name="Add_User_Comment_ReplyResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Comment_Reply" parameterOrder="replyID replyContent">
+
+         <wsdl:input message="impl:Update_User_Comment_ReplyRequest" name="Update_User_Comment_ReplyRequest"/>
+
+         <wsdl:output message="impl:Update_User_Comment_ReplyResponse" name="Update_User_Comment_ReplyResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Delete_User_Comment_Reply" parameterOrder="replyID">
+
+         <wsdl:input message="impl:Delete_User_Comment_ReplyRequest" name="Delete_User_Comment_ReplyRequest"/>
+
+         <wsdl:output message="impl:Delete_User_Comment_ReplyResponse" name="Delete_User_Comment_ReplyResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Follow_Number" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_Follow_NumberRequest" name="Get_Follow_NumberRequest"/>
+
+         <wsdl:output message="impl:Get_Follow_NumberResponse" name="Get_Follow_NumberResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Fans_Number" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_Fans_NumberRequest" name="Get_Fans_NumberRequest"/>
+
+         <wsdl:output message="impl:Get_Fans_NumberResponse" name="Get_Fans_NumberResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Permission" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_PermissionRequest" name="Get_User_PermissionRequest"/>
+
+         <wsdl:output message="impl:Get_User_PermissionResponse" name="Get_User_PermissionResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Focus_And_Fans_View_Permission" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_Focus_And_Fans_View_PermissionRequest" name="Get_User_Focus_And_Fans_View_PermissionRequest"/>
+
+         <wsdl:output message="impl:Get_User_Focus_And_Fans_View_PermissionResponse" name="Get_User_Focus_And_Fans_View_PermissionResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Set_User_Permission" parameterOrder="userID permission">
+
+         <wsdl:input message="impl:Set_User_PermissionRequest" name="Set_User_PermissionRequest"/>
+
+         <wsdl:output message="impl:Set_User_PermissionResponse" name="Set_User_PermissionResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Set_User_Focus_And_Fans_View_Permission" parameterOrder="userID permission">
+
+         <wsdl:input message="impl:Set_User_Focus_And_Fans_View_PermissionRequest" name="Set_User_Focus_And_Fans_View_PermissionRequest"/>
+
+         <wsdl:output message="impl:Set_User_Focus_And_Fans_View_PermissionResponse" name="Set_User_Focus_And_Fans_View_PermissionResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_All_Info" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_All_InfoRequest" name="Get_User_All_InfoRequest"/>
+
+         <wsdl:output message="impl:Get_User_All_InfoResponse" name="Get_User_All_InfoResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Follow_Information" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_Follow_InformationRequest" name="Get_Follow_InformationRequest"/>
+
+         <wsdl:output message="impl:Get_Follow_InformationResponse" name="Get_Follow_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Fans_Information" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_Fans_InformationRequest" name="Get_Fans_InformationRequest"/>
+
+         <wsdl:output message="impl:Get_Fans_InformationResponse" name="Get_Fans_InformationResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Focus" parameterOrder="userID focusID">
+
+         <wsdl:input message="impl:Add_FocusRequest" name="Add_FocusRequest"/>
+
+         <wsdl:output message="impl:Add_FocusResponse" name="Add_FocusResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Cancel_Focus" parameterOrder="userID focusID">
+
+         <wsdl:input message="impl:Cancel_FocusRequest" name="Cancel_FocusRequest"/>
+
+         <wsdl:output message="impl:Cancel_FocusResponse" name="Cancel_FocusResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Check_Follow_Eachohter" parameterOrder="userID focusID">
+
+         <wsdl:input message="impl:Check_Follow_EachohterRequest" name="Check_Follow_EachohterRequest"/>
+
+         <wsdl:output message="impl:Check_Follow_EachohterResponse" name="Check_Follow_EachohterResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Search_UserInfo" parameterOrder="name">
+
+         <wsdl:input message="impl:Get_Search_UserInfoRequest" name="Get_Search_UserInfoRequest"/>
+
+         <wsdl:output message="impl:Get_Search_UserInfoResponse" name="Get_Search_UserInfoResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="is_User_Follow" parameterOrder="userName fansName">
+
+         <wsdl:input message="impl:is_User_FollowRequest" name="is_User_FollowRequest"/>
+
+         <wsdl:output message="impl:is_User_FollowResponse" name="is_User_FollowResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Image" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_ImageRequest" name="Get_User_ImageRequest"/>
+
+         <wsdl:output message="impl:Get_User_ImageResponse" name="Get_User_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Image" parameterOrder="userID image">
+
+         <wsdl:input message="impl:Update_User_ImageRequest" name="Update_User_ImageRequest"/>
+
+         <wsdl:output message="impl:Update_User_ImageResponse" name="Update_User_ImageResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Update_Time" parameterOrder="userID">
+
+         <wsdl:input message="impl:Get_User_Update_TimeRequest" name="Get_User_Update_TimeRequest"/>
+
+         <wsdl:output message="impl:Get_User_Update_TimeResponse" name="Get_User_Update_TimeResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="HandleUserSoapBinding" type="impl:HandleUser">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="User_Regist">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="User_RegistRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="User_RegistResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Sign_In">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Sign_InRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Sign_InResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_ID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_IDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_IDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Find_Password_Question">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Find_Password_QuestionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Find_Password_QuestionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Check_Question_Answer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Check_Question_AnswerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Check_Question_AnswerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Change_Password">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Change_PasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Change_PasswordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Main_Activity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_Main_ActivityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_Main_ActivityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_Main_Activity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_Main_ActivityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_Main_ActivityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_classify_activity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_classify_activityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_classify_activityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Read_Main_Activity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Read_Main_ActivityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Read_Main_ActivityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Classify_Activity_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_Classify_Activity_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_Classify_Activity_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Activity_Count">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Activity_CountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Activity_CountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Channel_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Channel_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Channel_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Channel_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Channel_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Channel_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Folk_Activity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_Folk_ActivityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_Folk_ActivityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Count">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Folk_CountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Folk_CountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Folk_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Folk_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Single_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Folk_Single_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Folk_Single_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Folk_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Folk_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Folk_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_folk_activity_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_folk_activity_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_folk_activity_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Search_Folk_Info">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Search_Folk_InfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Search_Folk_InfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_User_Order">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_User_OrderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_User_OrderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Cancel_User_Order">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Cancel_User_OrderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Cancel_User_OrderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Order">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_OrderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_OrderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Check_Is_Order">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Check_Is_OrderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Check_Is_OrderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Find_Activity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_Find_ActivityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_Find_ActivityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Find_Activity_ID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Find_Activity_IDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Find_Activity_IDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Find_Activity_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Find_Activity_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Find_Activity_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_Find_Activity_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_Find_Activity_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_Find_Activity_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_User_Comment_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_User_Comment_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_User_Comment_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Delete_User_Comment_By_ID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Delete_User_Comment_By_IDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Delete_User_Comment_By_IDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Comment_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_User_Comment_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_User_Comment_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Comment_Informaiton">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_User_Comment_InformaitonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_User_Comment_InformaitonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_ID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_IDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_IDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_ID_By_User">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_ID_By_UserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_ID_By_UserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_InformationRequest1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_InformationResponse1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information_By_User">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_Information_By_UserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_Information_By_UserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Information_By_Own">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_Information_By_OwnRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_Information_By_OwnResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_All_User_Coment_Info_By_ID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_All_User_Coment_Info_By_IDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_All_User_Coment_Info_By_IDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Comment_Like_Number">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Comment_Like_NumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Comment_Like_NumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Count">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_CountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_CountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Is_Like">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Is_LikeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Is_LikeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Comment_Reply">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Comment_ReplyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Comment_ReplyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Set_User_Like">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Set_User_LikeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Set_User_LikeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Cancel_User_Like">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Cancel_User_LikeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Cancel_User_LikeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_User_Comment_Reply">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_User_Comment_ReplyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_User_Comment_ReplyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Comment_Reply">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_User_Comment_ReplyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_User_Comment_ReplyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Delete_User_Comment_Reply">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Delete_User_Comment_ReplyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Delete_User_Comment_ReplyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Follow_Number">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Follow_NumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Follow_NumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Fans_Number">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Fans_NumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Fans_NumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Permission">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_PermissionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_PermissionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Focus_And_Fans_View_Permission">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Focus_And_Fans_View_PermissionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Focus_And_Fans_View_PermissionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Set_User_Permission">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Set_User_PermissionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Set_User_PermissionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Set_User_Focus_And_Fans_View_Permission">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Set_User_Focus_And_Fans_View_PermissionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Set_User_Focus_And_Fans_View_PermissionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_All_Info">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_All_InfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_All_InfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Follow_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Follow_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Follow_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Fans_Information">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Fans_InformationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Fans_InformationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Add_Focus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Add_FocusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Add_FocusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Cancel_Focus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Cancel_FocusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Cancel_FocusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Check_Follow_Eachohter">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Check_Follow_EachohterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Check_Follow_EachohterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_Search_UserInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_Search_UserInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_Search_UserInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="is_User_Follow">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="is_User_FollowRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="is_User_FollowResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Update_User_Image">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Update_User_ImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Update_User_ImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="Get_User_Update_Time">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="Get_User_Update_TimeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="Get_User_Update_TimeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="HandleUserService">
+
+      <wsdl:port binding="impl:HandleUserSoapBinding" name="HandleUser">
+
+         <wsdlsoap:address location="http://localhost:8088//services/HandleUser"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
